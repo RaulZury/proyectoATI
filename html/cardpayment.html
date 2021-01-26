@@ -1,0 +1,223 @@
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="media/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <a href="#"><img class="d-block mx-auto mb-4" src="media/logo.png" alt="" width="100" height="100"></a>
+        <h2></h2>
+        <p class="lead">Registre sus datos para proceder al pago de los elementos de su carrito</p>
+        <p class="lead">Haga click sobre el icono para salir sin guardar</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Carrito</span>
+            <span class="badge badge-secondary badge-pill">1</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Frankenstein</h6>
+                <small class="text-muted">Libro</small>
+              </div>
+              <span class="text-muted">$350</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>CODIGOMÁGICO</small>
+              </div>
+              <span class="text-success">-$35</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (MXN)</span>
+              <strong>$315</strong>
+            </li>
+          </ul>
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Código de promoción">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Reclamar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Datos del cliente</h4>
+          <form class="needs-validation" novalidate="">
+            <div class="mb-3">
+              <label for="address">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="P. Sherman Calle Wallaby 42 Sydney" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">País</label>
+                <select class="custom-select d-block w-100" id="country" required="">
+                  <option value="">Elegir...</option>
+                  <option>México</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un país válido.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Estado</label>
+                <select class="custom-select d-block w-100" id="state" required="">
+                  <option value="">Elegir...</option>
+                  <option>CDMX</option>
+                  <option>México</option>
+                  <option>Guadalajara</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un estado válido
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Código Postal</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Nombre(s)</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Goyo" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Apellidos</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Pumita " value="" required="">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+  
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info">
+              <label class="custom-control-label" for="save-info">Guardar estos datos para futuras compras</label>
+            </div>
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Método de pago</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                <label class="custom-control-label" for="credit">Tarjeta de Crédito</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                <label class="custom-control-label" for="debit">Tarjeta de Débito</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Nombre en Tarjeta</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                <small class="text-muted">Introducir el nombre completo que esta en la tarjeta</small>
+                <div class="invalid-feedback">
+                  Nombre es requerido
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Numero de tarjeta</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                <ul class="list-inline">
+                    <img src="media/MC.png" alt="facebook" width="5%" ></a>
+                    <img src="media/AM.png" alt="facebook" width="5%"></a>
+                    <img src="media/Visa.png" alt="facebook" width="5%"></a>
+                </ul>
+                <div class="invalid-feedback">
+                  Verificar datos de tarjeta
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiración</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Dato requerido
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Verificar CVV
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Proceder al pago</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© Librería Grandhi</p>
+        <ul class="list-inline">
+            <a href="https://facebook.com/raul.zury" target="_blank"><img src="media/fb.png" alt="facebook" width="3%" ></a>
+            <a href="https://instagram.com/raul_zury" target="_blank"><img src="media/ig.png" alt="facebook" width="3%"></a>
+            <a href="https://twitter.com/Raul_Zury" target="_blank"><img src="media/tw.png" alt="facebook" width="5%"></a>
+            <a href="tel:5521993746"><img src="media/tel oscuro.png" alt="telefono" width="3%"></a>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</html>
