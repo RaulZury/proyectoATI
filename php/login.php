@@ -22,4 +22,7 @@
             header("Location: vistaLogin.php");
           }
     }
+    if($filas == 0){
+        header("Location: vistaLogin.php");
+    }
 ?>
