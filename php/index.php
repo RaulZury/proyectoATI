@@ -73,7 +73,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="true" href="#">Nosotros</a>
+                        <a class="nav-link active" aria-current="true" href="stock.php">Stock</a>
                     </li>
 
                     <li class="nav-item">
