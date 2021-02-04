@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Búscar" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                         <button class="btn btn-dark" type="submit" onclick="location.href='http://localhost/proyectoATI/html/searchBook.html'">Ir</button>
                     </form>
                 </ul>
@@ -27,7 +27,8 @@
                             <button class="btn btn-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             <span ><img src="http:/proyectoATI/images/perfil_oscuro.jpg" alt="" width="30" height="30"><?php echo $_SESSION['nombre']?></span></button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="php/cerrarSesion.php" style="text-decoration: none">Cerrar Sesión</a></li>
+                                    <li><a class="dropdown-item" href="cerrarSesion.php" style="text-decoration: none">Cerrar Sesión</a></li>
+                                    <li><a class="dropdown-item" href="perfilClienteLogin.php" style="text-decoration: none">Perfil</a></li>
                                 </ul>
                         </div>
                         <button class="btn btn-light" type="button" onclick="location.href='http://localhost/proyectoATI/php/buy.php'"><img src="http://localhost/proyectoATI/images/Carrito_negro_1.jpg" alt="" width="40" height="40" ><a>Carrito</a></button>

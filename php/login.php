@@ -3,6 +3,8 @@
     include("conexiondb.php");
     session_start();
 
+    $alert = '';
+
     $usuario = $_POST['name'];
     $contraseña = $_POST['contraseña'];
 
@@ -16,8 +18,8 @@
     if ($filas > 0) {
         header("Location: perfilClienteLogin.php");
     } else {
-        echo "Error en la autenticación";
+        if (empty($_POST['name']) || empty($_POST['contraseña'])) {
+            header("Location: vistaLogin.php");
+          }
     }
-    
-
 ?>

@@ -46,20 +46,10 @@
                 </form>
             </main>
 
-            <!--Pie-->
-            <footer>
-                <div class="row">
-                    <div class="col-sm-9">
-                        <p>Redes sociales, términos y condiciones. Información de contacto. Derechos reservados.</p>
-                    </div>
-                    <div class="col-sm-3 pr-0">
-                        <img class="iconoF" src="img/contacto.png" alt="">
-                        <img class="iconoF" src="img/facebook.png" alt="">
-                        <img class="iconoF" src="img/instagram.png" alt="">
-                        <img class="iconoF" src="img/tweeter.png" alt="">
-                    </div>
-                </div>
-            </footer>
+
+
+
+
         </div>
 
         <!-- Agregamos unos scripts-->
@@ -67,5 +57,7 @@
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"></script>
     </body>
+
+    <?php include("footer.php"); ?>
 
 </html>
